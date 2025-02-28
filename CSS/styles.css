@@ -1,9 +1,0 @@
-:root {
-    --Main-text: white;
-}
-
-body {
-    color: var(--Main-text);
-    font-family: "Roboto", serif;
-    background-color: black;
-}
