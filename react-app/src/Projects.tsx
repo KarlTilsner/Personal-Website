@@ -5,6 +5,7 @@ import { doc, getDoc } from "firebase/firestore";
 // Define TypeScript types for the data
 interface Project {
     name: string;
+    desc: string;
 }
 
 interface ProjectsData {
@@ -40,7 +41,12 @@ const Projects: React.FC = () => {
             <h2>Projects</h2>
             <div>
                 {projects.map((project, index) => (
-                    <p key={index}>{project.name}</p>
+                    <div className="ProjectCard">
+                        <div className="ProjectCardContent">
+                            <p key={index}>{project.name}</p>
+                            <p key={index}>{project.desc}</p>
+                        </div>
+                    </div>
                 ))}
             </div>
         </>
