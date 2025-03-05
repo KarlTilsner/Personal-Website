@@ -41,10 +41,14 @@ const Projects: React.FC = () => {
             <h2>Projects</h2>
             <div>
                 {projects.map((project, index) => (
-                    <div className="ProjectCard">
+                    <div
+                        key={index}
+                        className="ProjectCard"
+                        onClick={(event) => console.log(event)} // Redirect to project page
+                    >
                         <div className="ProjectCardContent">
-                            <p key={index}>{project.name}</p>
-                            <p key={index}>{project.desc}</p>
+                            <p key={`Name ${index}`}>{project.name}</p>
+                            <p key={`Desc ${index}`}>{project.desc}</p>
                         </div>
                     </div>
                 ))}
