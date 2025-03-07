@@ -1,4 +1,5 @@
 import Projects from "./Projects";
+import ProjectImages from "./ProjectImages";
 
 function App() {
     return (
@@ -13,6 +14,10 @@ function App() {
 
             <div>
                 <Projects />
+            </div>
+
+            <div>
+                <ProjectImages />
             </div>
         </>
     );
