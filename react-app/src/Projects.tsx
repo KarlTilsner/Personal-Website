@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { db } from "./init-firebase";
 import { doc, getDoc } from "firebase/firestore";
+import ProjectImages from "./ProjectImages";
 
 // Define TypeScript types for the data
 interface Project {
     name: string;
     desc: string;
+    img_id: string;
 }
 
 interface ProjectsData {
@@ -49,6 +51,7 @@ const Projects: React.FC = () => {
                         <div className="ProjectCardContent">
                             <p key={`Name ${index}`}>{project.name}</p>
                             <p key={`Desc ${index}`}>{project.desc}</p>
+                            <ProjectImages img_id={project.img_id} />
                         </div>
                     </div>
                 ))}
